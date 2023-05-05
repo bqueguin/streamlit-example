@@ -29,10 +29,6 @@ def get_config(filename: str, section: str) -> dict:
 
 config_filename = 'config.ini'
 
-DB_CONFIG = get_config(config_filename, section='db')
-
 LOGGING_CONFIG = get_config(config_filename, section='logging')
 lg.basicConfig(**LOGGING_CONFIG)
 logger = lg.getLogger()
-
-APP_CONFIG = get_config(config_filename, section='app')
